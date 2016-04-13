@@ -1,0 +1,11 @@
+<h3>Последние десять записей habr'а</h3>
+<div> 
+  <%= button_to "Заполнить таблицу", fill_path, method: :get  %> 
+  <%= button_to "Обновить", root_path, method: :get %> 
+</div>
+<div>
+  <% @articles.each do |article| %>
+    <p><%= article.title %> </br>
+    <%= link_to article.url, article.url %><p>
+  <% end %>
+</div>
